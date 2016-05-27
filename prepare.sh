@@ -10,7 +10,7 @@ set -o errexit
 
 cd "`dirname \"$0\"`"
 
-TP_DIR=`pwd`
+TP_DIR=`pwd`/thirdparty
 SDL2_DIR=${TP_DIR}/SDL2
 SDL2_NET_DIR=${TP_DIR}/SDL2_net
 PNG_DIR=${TP_DIR}/png
@@ -44,4 +44,4 @@ $CMAKE_EXE ../Doom64EX -GXcode \
 	-DPNG_LIBRARY_RELEASE="${PNG_DIR}/lib/libpng16.a" \
 	-DFLUIDSYNTH_INCLUDE_DIR="${FLUIDSYNTH_DIR}/include" \
 	-DFLUIDSYNTH_LIBRARIES="${FLUIDSYNTH_LIB_PREFIX}fluidsynth.a;${FLUIDSYNTH_LIB_PREFIX}glib.a;${FLUIDSYNTH_LIB_PREFIX}intl.a" \
-	-DCMAKE_EXE_LINKER_FLAGS="-framework AudioUnit -framework Carbon -framework Cocoa -framework CoreAudio -framework CoreMIDI -framework CoreVideo -framework ForceFeedback"
+	-DCMAKE_EXE_LINKER_FLAGS="-framework AudioUnit -framework Carbon -framework Cocoa -framework CoreAudio -framework CoreMIDI -framework CoreVideo -framework ForceFeedback -framework IOKit -liconv"
