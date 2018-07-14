@@ -48,4 +48,4 @@ $CMAKE_EXE ../Doom64EX -GXcode \
 	-DPNG_LIBRARY_RELEASE="${PNG_DIR}/lib/libpng16.a" \
 	-DFLUIDSYNTH_INCLUDE_DIR="${FLUIDSYNTH_DIR}/include" \
 	-DFLUIDSYNTH_LIBRARIES="${FLUIDSYNTH_LIB_PREFIX}fluidsynth.a;${FLUIDSYNTH_LIB_PREFIX}glib.a;${FLUIDSYNTH_LIB_PREFIX}intl.a" \
-	-DCMAKE_EXE_LINKER_FLAGS="-framework AudioUnit -framework Carbon -framework Cocoa -framework CoreAudio -framework CoreMIDI -framework CoreVideo -framework ForceFeedback -framework IOKit -liconv"
+	-DCMAKE_EXE_LINKER_FLAGS="-framework AudioToolbox -framework AudioUnit -framework Carbon -framework Cocoa -framework CoreAudio -framework CoreMIDI -framework CoreVideo -framework ForceFeedback -framework IOKit -liconv"
